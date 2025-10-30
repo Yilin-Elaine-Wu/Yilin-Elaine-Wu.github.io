@@ -1,30 +1,31 @@
 // ---------- Navbar titles
 const enNavbarData = {
-  title: " Your name ",
+  title: " Yilin (Elaine) Wu ",
   Home: "Home",
-  publications: "publications",
+  publications: "Publications",
   Research: "Research",
-  Jobs: "Jobs",
-  Contact: "Contact",
+  Jobs: "CV",
+  Contact: "Contact me",
 };
 
 // ---------- Home page data
 const enHomePageData = {
-  name: " Your name ",
-  jobTitle: " Job title ",
+  name: " Yilin (Elaine) Wu ",
+  jobTitle: " Undergraduate Researcher in Cognitive Science ",
   home_title: "About me",
   home_content: `
   <div>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <p> Hi! I'm Yilin Wu. I'm an undergraduate majoring in psychology in Nanjing University.
+    I'm interested in human cognition and computational modeling of human minds. I work to understand how human attend to and extract useful information from a complex environment, and how they form abstract mental representations in an effective way.
+    I try to answer these questions in a way of studying the human innate cognitive toolkits including game-playing, sketches and language, primarily by conducting behavioral experiments and building computational models including normative models like Bayesian model and expectedly also neural networks. 
+    I also do some research with children in their early stage of development to investigate how the intricate human minds are built up step by step.
     </p>
     <h2 class='title'> Main works </h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Morbi tristique senectus et netus. Mattis pellentesque id nibh  </p>
     <ul>
-      <li> Heuristics</li>
-      <li> Policy planning </li>
-      <li> Flexiblity to details </li>
+      <li> Attention and Learning</li>
+      <li> Mental Representations </li>
+      <li> Computational modeling of human behaviors </li>
     </ul>
   </div>
   `,
@@ -32,7 +33,7 @@ const enHomePageData = {
 
 // ---------- Publications page data
 const enPublicationsPageData = {
-  type_one_title: "Journal Papers",
+  type_one_title: "Conference Contribution",
 
   type_one_items: [
     {
@@ -132,7 +133,7 @@ const enResearchPageData = {
 
 // ---------- Jobs page data
 const enJobsPageData = {
-  title: "Jobs",
+  title: "CV",
   items: [
     {
       title: `Job title`,
