@@ -68,36 +68,68 @@ $(document).ready(function () {
     ],
   };
 
+  // function homeData() {
+  //   document.getElementById("page_title").innerText =
+  //     lang === "en" ? enHomePageData.name : faHomePageData.name;
+
+  //   // document.getElementById("home_image").src = home_data.image
+  //   //   ? home_data.image
+  //   //   : "";
+  //   document.addEventListener('DOMContentLoaded', function () {
+  //     var el = document.getElementById('home_image');
+  //     if (el) el.src = home_data.image || '';
+  //   });
+  //   document.getElementById("home_name").innerText =
+  //     lang === "en" ? enHomePageData.name : faHomePageData.name;
+  //   document.getElementById("home_job_title").innerText =
+  //     lang === "en" ? enHomePageData.jobTitle : faHomePageData.jobTitle;
+  //   document.getElementById("home_links").innerHTML = home_data.links
+  //     .filter((item) => item.active)
+  //     .map(
+  //       (link) =>
+  //         `<li>
+  //             <a href=${link.name} target='_blank'><img src=${link.img} alt=${link.name} /> </a>
+  //           </li>`
+  //     )
+  //     .join("");
+
+  //   document.getElementById("home_title").innerText =
+  //     lang === "en" ? enHomePageData.home_title : faHomePageData.home_title;
+  //   document.getElementById("home_content").innerHTML =
+  //     lang === "en" ? enHomePageData.home_content : faHomePageData.home_content;
+  // }
+
   function homeData() {
-    document.getElementById("page_title").innerText =
-      lang === "en" ? enHomePageData.name : faHomePageData.name;
+  document.addEventListener('DOMContentLoaded', function () {
+    var pageTitle = document.getElementById('page_title');
+    if (pageTitle) pageTitle.innerText = lang === 'en' ? enHomePageData.name : faHomePageData.name;
 
-    // document.getElementById("home_image").src = home_data.image
-    //   ? home_data.image
-    //   : "";
-    document.addEventListener('DOMContentLoaded', function () {
-      var el = document.getElementById('home_image');
-      if (el) el.src = home_data.image || '';
-    });
-    document.getElementById("home_name").innerText =
-      lang === "en" ? enHomePageData.name : faHomePageData.name;
-    document.getElementById("home_job_title").innerText =
-      lang === "en" ? enHomePageData.jobTitle : faHomePageData.jobTitle;
-    document.getElementById("home_links").innerHTML = home_data.links
-      .filter((item) => item.active)
-      .map(
-        (link) =>
-          `<li>
-              <a href=${link.name} target='_blank'><img src=${link.img} alt=${link.name} /> </a>
-            </li>`
-      )
-      .join("");
-
-    document.getElementById("home_title").innerText =
-      lang === "en" ? enHomePageData.home_title : faHomePageData.home_title;
-    document.getElementById("home_content").innerHTML =
-      lang === "en" ? enHomePageData.home_content : faHomePageData.home_content;
-  }
+    var img = document.getElementById('home_image');
+    if (img) img.src = home_data.image || '';
+    
+    var nameEl = document.getElementById('home_name');
+    if (nameEl) nameEl.innerText = lang === 'en' ? enHomePageData.name : faHomePageData.name;
+    
+    var jobEl = document.getElementById('home_job_title');
+    if (jobEl) jobEl.innerText = lang === 'en' ? enHomePageData.jobTitle : faHomePageData.jobTitle;
+    
+    var linksEl = document.getElementById('home_links');
+    if (linksEl && Array.isArray(home_data.links)) {
+      linksEl.innerHTML = home_data.links
+        .filter(function (item) { return item.active; })
+        .map(function (link) {
+          return "<li><a href=\"" + link.name + "\" target=\"_blank\"><img src=\"" + link.img + "\" alt=\"" + link.name + "\" /></a></li>";
+        })
+        .join('');
+    }
+    
+    var titleEl = document.getElementById('home_title');
+    if (titleEl) titleEl.innerText = lang === 'en' ? enHomePageData.home_title : faHomePageData.home_title;
+    
+    var contentEl = document.getElementById('home_content');
+    if (contentEl) contentEl.innerHTML = lang === 'en' ? enHomePageData.home_content : faHomePageData.home_content;
+  });
+}
 
   if (pathname === "/" || pathname === "/index") {
     homeData();
