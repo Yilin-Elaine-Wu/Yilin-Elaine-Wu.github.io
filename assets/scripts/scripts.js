@@ -72,9 +72,13 @@ $(document).ready(function () {
     document.getElementById("page_title").innerText =
       lang === "en" ? enHomePageData.name : faHomePageData.name;
 
-    document.getElementById("home_image").src = home_data.image
-      ? home_data.image
-      : "";
+    // document.getElementById("home_image").src = home_data.image
+    //   ? home_data.image
+    //   : "";
+    document.addEventListener('DOMContentLoaded', function () {
+      var el = document.getElementById('home_image');
+      if (el) el.src = home_data.image || '';
+    });
     document.getElementById("home_name").innerText =
       lang === "en" ? enHomePageData.name : faHomePageData.name;
     document.getElementById("home_job_title").innerText =
