@@ -48,75 +48,7 @@ const enPublicationsPageData = {
       github: "",
       download: "Yilin-Elaine-Wu/files/CCN2025_poster.pdf",
       writers: "An, J., Hu, J., <b>Wu, Y.E.</b>, Ning, S., Zhu, F., Pan, Y., & Ji, N*",
-    },
-    // {
-    //   title: `“Now you are speaking my language” Language-specific transparency and legislative negotiations in the Council of Ministers of the European Union. (with ).`,
-    //   abstract: `Politicians across the political spectrum have taken to TikTok in an attempt to reach young voters by producing original videos. This novel trend has turned TikTok into the new polarizing ring in the political communication battle, deepening the partisan breach around issues such as climate change. However`,
-    //   date: "1996",
-    //   link: "",
-    //   github: "http://github.com",
-    //   writers: ["Claudio Cioffi-Revilla", ""],
-    // },
-  ],
-
-  // type_two_title: "Under Review",
-  // type_two_items: [
-  //   {
-  //     title: `Elena Reinaga. 2016. If I were born again I would still be a sex worker. P. Purdy and N. Umansky. OpenDemocracy.`,
-  //     abstract: ``,
-  //     date: "1996",
-  //     link: "",
-  //     github: "",
-  //     writers: [],
-  //   },
-  //   {
-  //     title: `“Now you are speaking my language” Language-specific transparency and legislative negotiations in the Council of Ministers of the European Union. (with ).`,
-  //     abstract: `we adopt an elite-focused approach to explore the ways in which left and right-leaning American political elites differ in their visual and emotional framing of climate change. Overall, this study provides new insight into how politicians across party lines communicate about critical and polarizing political issues, such as climate change, by adapting to novel online communication channels.`,
-  //     date: "1996",
-  //     link: "http://link.com",
-  //     github: "http://github.com",
-  //     writers: ["Claudio Cioffi-Revilla", "masoud Claudio "],
-  //   },
-  // ],
-
-  // type_three_title: "Book Chapters",
-  // type_three_items: [
-  //   {
-  //     title: `Elena Reinaga. 2016. If I were born again I would still be a sex worker. P. Purdy and N. Umansky. OpenDemocracy.`,
-  //     abstract: ``,
-  //     date: "",
-  //     link: "",
-  //     github: "",
-  //     writers: [],
-  //   },
-  //   {
-  //     title: `“Now you are speaking my language” Language-specific transparency and legislative negotiations in the Council of Ministers of the European Union. (with ).`,
-  //     abstract: `we adopt an elite-focused approach to explore the ways in which left and right-leaning American political elites differ in their visual and emotional framing of climate change. Overall, this study provides new insight into how politicians across party lines communicate about critical and polarizing political issues, such as climate change, by adapting to novel online communication channels.`,
-  //     date: "1996",
-  //     link: "http://link.com",
-  //     github: "http://github.com",
-  //     writers: ["Claudio Cioffi-Revilla"],
-  //   },
-  // ],
-
-  // type_four_title: "",
-  // type_four_items: [
-  //   {
-      title: `Elena Reinaga. 2016. If I were born again I would still be a sex worker. P. Purdy and N. Umansky. OpenDemocracy.`,
-      abstract: ``,
-      date: "",
-      link: "",
-      github: "",
-      writers: [],
-    },
-    {
-      title: `“Now you are speaking my language” Language-specific transparency and legislative negotiations in the Council of Ministers of the European Union. (with ).`,
-      abstract: `we adopt an elite-focused approach to explore the ways in which left and right-leaning American political elites differ in their visual and emotional framing of climate change. Overall, this study provides new insight into how politicians across party lines communicate about critical and polarizing political issues, such as climate change, by adapting to novel online communication channels.`,
-      date: "1996",
-      link: "http://link.com",
-      github: "http://github.com",
-      writers: ["Claudio Cioffi-Revilla"],
-    },
+    }
   ],
 };
 
