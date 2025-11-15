@@ -68,6 +68,51 @@ $(document).ready(function () {
     ],
   };
 
+  document.addEventListener("DOMContentLoaded", homeData);
+
+  function homeData() {
+    const pageTitleEl = document.getElementById("page_title");
+    const homeImageEl = document.getElementById("home_image");
+    const homeNameEl = document.getElementById("home_name");
+    const homeJobTitleEl = document.getElementById("home_job_title");
+    const homeLinksEl = document.getElementById("home_links");
+    const homeTitleEl = document.getElementById("home_title");
+    const homeContentEl = document.getElementById("home_content");
+  
+    if (pageTitleEl)
+      pageTitleEl.innerText = lang === "en" ? enHomePageData.name : faHomePageData.name;
+  
+    if (homeImageEl)
+      homeImageEl.src = home_data.image || "";
+  
+    if (homeNameEl)
+      homeNameEl.innerText = lang === "en" ? enHomePageData.name : faHomePageData.name;
+  
+    if (homeJobTitleEl)
+      homeJobTitleEl.innerText = lang === "en" ? enHomePageData.jobTitle : faHomePageData.jobTitle;
+  
+    if (homeLinksEl)
+      homeLinksEl.innerHTML = home_data.links
+        .filter((item) => item.active)
+        .map(
+          (link) =>
+            `<li>
+              <a href="${link.name}" target="_blank">
+                <img src="${link.img}" alt="${link.name}" />
+              </a>
+            </li>`
+        )
+        .join("");
+  
+    if (homeTitleEl)
+      homeTitleEl.innerText =
+        lang === "en" ? enHomePageData.home_title : faHomePageData.home_title;
+  
+    if (homeContentEl)
+      homeContentEl.innerHTML =
+        lang === "en" ? enHomePageData.home_content : faHomePageData.home_content;
+  }
+  
   // function homeData() {
   //   document.getElementById("page_title").innerText =
   //     lang === "en" ? enHomePageData.name : faHomePageData.name;
@@ -99,37 +144,7 @@ $(document).ready(function () {
   //     lang === "en" ? enHomePageData.home_content : faHomePageData.home_content;
   // }
 
-  function homeData() {
-  document.addEventListener('DOMContentLoaded', function () {
-    var pageTitle = document.getElementById('page_title');
-    if (pageTitle) pageTitle.innerText = lang === 'en' ? enHomePageData.name : faHomePageData.name;
 
-    var img = document.getElementById('home_image');
-    if (img) img.src = home_data.image || '';
-    
-    var nameEl = document.getElementById('home_name');
-    if (nameEl) nameEl.innerText = lang === 'en' ? enHomePageData.name : faHomePageData.name;
-    
-    var jobEl = document.getElementById('home_job_title');
-    if (jobEl) jobEl.innerText = lang === 'en' ? enHomePageData.jobTitle : faHomePageData.jobTitle;
-    
-    var linksEl = document.getElementById('home_links');
-    if (linksEl && Array.isArray(home_data.links)) {
-      linksEl.innerHTML = home_data.links
-        .filter(function (item) { return item.active; })
-        .map(function (link) {
-          return "<li><a href=\"" + link.name + "\" target=\"_blank\"><img src=\"" + link.img + "\" alt=\"" + link.name + "\" /></a></li>";
-        })
-        .join('');
-    }
-    
-    var titleEl = document.getElementById('home_title');
-    if (titleEl) titleEl.innerText = lang === 'en' ? enHomePageData.home_title : faHomePageData.home_title;
-    
-    var contentEl = document.getElementById('home_content');
-    if (contentEl) contentEl.innerHTML = lang === 'en' ? enHomePageData.home_content : faHomePageData.home_content;
-  });
-}
 
   if (pathname === "/" || pathname === "/index") {
     homeData();
