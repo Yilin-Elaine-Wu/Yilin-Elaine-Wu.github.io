@@ -73,10 +73,10 @@ const enJobsPageData = {
   ]
 };
 
-// Place the script block OUTSIDE the object definition
-document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("content_wrapper");
-  if (container) {
-    container.innerHTML = `<iframe src="Yilin-Elaine-Wu/files/CV_Yilin_Wu_25fall.pdf" style="width:100%; height:100vh;" frameborder="0"></iframe>`;
-  }
-});
+// // Place the script block OUTSIDE the object definition
+// document.addEventListener("DOMContentLoaded", () => {
+//   const container = document.getElementById("content_wrapper");
+//   if (container) {
+//     container.innerHTML = `<iframe src="Yilin-Elaine-Wu/files/CV_Yilin_Wu_25fall.pdf" style="width:100%; height:100vh;" frameborder="0"></iframe>`;
+//   }
+// });
