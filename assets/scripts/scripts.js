@@ -271,8 +271,15 @@ $(document).ready(function () {
     document.getElementById("page_title").innerText =
       lang === "en" ? "Jobs" : " سوابق شغلی ";
 
-    document.getElementById("jobs_title").innerHTML =
-      lang === "en" ? enJobsPageData.title : faJobsPageData.title;
+    // document.getElementById("jobs_title").innerHTML =
+    //   lang === "en" ? enJobsPageData.title : faJobsPageData.title;
+    document.addEventListener("DOMContentLoaded", () => {
+      const jobsTitleEl = document.getElementById("jobs_title");
+      if (jobsTitleEl) {
+        jobsTitleEl.innerHTML =
+          lang === "en" ? enJobsPageData.title : faJobsPageData.title;
+      }
+    });
 
     document.getElementById("jobs_data").innerHTML = (
       lang === "en" ? enJobsPageData.items : faJobsPageData.items
