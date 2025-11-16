@@ -618,6 +618,21 @@
   padding-right: 1rem;
 }
 
+.cv-wrapper {
+  height: 85vh;         /* 占屏幕高度的 85% */
+  max-height: 900px;    /* 最高 900 像素 */
+  width: 100%;          /* 占满宽度 */
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;     /* 避免出现双滚动条 */
+}
+
+.cv-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* Contact page styles */
 .rtl_wrapper #contact_data img {
   width: 30px;
