@@ -15,15 +15,20 @@ const enHomePageData = {
   home_title: "About me",
   home_content: `
   <div>
-    <p> Hi! I'm Yilin Wu. I'm an undergraduate majoring in psychology in Nanjing University.
-    I'm interested in human cognition and computational modeling of human minds. I am currently a research intern working in China Institute of Brain Research, supervised by Dr. Ni Ji. And I am seeking for a RA position in cognitive science after my graduation in 2026, hoping to apply for PhD candidates in the 26-27 cycle. In my free time, I enjoy singing, cooking and ASMR videos.
-    
+    <p> 
+    Hi! I'm Yilin Wu. I'm an undergraduate majoring in psychology in Nanjing University. I'm interested in human cognition and computational modeling of human minds. I am currently a research intern working in China Institute of Brain Research, supervised by Dr. Ni Ji. 
+    I am seeking a research assistant position in cognitive science after my graduation in 2026, in preparation for applying to PhD programs in the 2026–27 application cycle. 
+    </p>
+    <p>
+    In my free time, I enjoy singing, cooking and ASMR videos.
     </p>
     <h2 class='title'> Main works </h2>
     <p>
     I work to understand how human attend to and extract useful information from a complex environment, and how they form abstract mental representations in an effective way.
     I try to answer these questions in a way of studying the human innate cognitive toolkits including game-playing, sketches and language, primarily by conducting behavioral experiments and building computational models including normative models like Bayesian model and expectedly also neural networks. 
-    I also do some research with children in their early stage of development to investigate how the intricate human minds are built up step by step. I'm looking forward to collaborate with researchers experienced in techniques like eye-tracking, real-life video analysis and neuroimaging as well.
+    </p>
+    <p>
+    I'm also interested in research in developmental cognition, I hope to investigate how the intricate human minds are built up step by step, by interacting with children in their early stage of development. I'm looking forward to collaborate with researchers experienced in techniques like eye-tracking, real-life video analysis and neuroimaging as well.
     Please check the research page for more details in my projects.
     </p>
     <ul>
@@ -42,9 +47,9 @@ const enPublicationsPageData = {
   type_one_items: [
     {
       title: `Task-space dimensions guide human exploration in complex environments.`,
-      abstract: `Politicians across the political spectrum have taken to TikTok in an attempt to reach young voters by producing original videos. This novel trend has turned TikTok into the new polarizing ring in the political communication battle, deepening the partisan breach around issues such as climate change. However`,
+      abstract: `Humans frequently make decisions in complex, high-dimensional environments, where identifying task-relevant information is critical for rapid behavior optimization. Humans outperform standard reinforcement learning agents in navigating such complexity, yet the cognitive strategies of humans remain unclear. To address this, we developed a novel multi-dimensional learning task in which only a subset of dimensions is reward-related. Crucially, unlike prior studies, subjects are uninformed of the true task dimensionality and have to identify them through exploration. This design closely mimics the ambiguity in real-world tasks. Our results identified two stereotyped choice patterns that reveal “dimension-guided” strategies in exploration and exploitation. Cross-subject analyses suggest that dimension-guided exploration may promote the efficiency of reward-based learning. These findings indicate that humans leverage task dimensionality to guide exploration, and provide inspiration for improving exploration efficiency in AI agents.`,
       date: "2025, August",
-      link: "http://link.com",
+      link: "https://yilin-elaine-wu.github.io",
       github: "",
       download: "Yilin-Elaine-Wu/files/CCN2025_poster.pdf",
       writers: "An, J., Hu, J., <b>Wu, Y.E.</b>, Ning, S., Zhu, F., Pan, Y., & Ji, N*",
@@ -57,7 +62,7 @@ const enResearchPageData = {
   title: "Research",
   content: `
     <div class='research_content'>
-        <p> My research
+        <p> projects in my CV and I need a research interests section and a research questions I'm interested in section (like my SOP)
         </p>
     </div>
   `,
