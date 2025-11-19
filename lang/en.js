@@ -16,7 +16,7 @@ const enHomePageData = {
   home_content: `
   <div>
     <p> 
-    Hi! I'm Yilin Wu. I'm an undergraduate majoring in psychology in Nanjing University. I'm interested in human cognition and computational modeling of human minds. I am currently a research intern working in China Institute of Brain Research, supervised by Dr. Ni Ji. 
+    Hi! I'm Yilin. I'm an undergraduate majoring in psychology in Nanjing University. I'm interested in human cognition and computational modeling of human minds. I am currently a research intern working in China Institute of Brain Research, supervised by Dr. Ni Ji. 
     I am seeking a research assistant position in cognitive science after my graduation in 2026, in preparation for applying to PhD programs in the 2026–27 application cycle. 
     </p>
     <p>
@@ -49,9 +49,7 @@ const enPublicationsPageData = {
       title: `Task-space dimensions guide human exploration in complex environments.`,
       abstract: `Humans frequently make decisions in complex, high-dimensional environments, where identifying task-relevant information is critical for rapid behavior optimization. Humans outperform standard reinforcement learning agents in navigating such complexity, yet the cognitive strategies of humans remain unclear. To address this, we developed a novel multi-dimensional learning task in which only a subset of dimensions is reward-related. Crucially, unlike prior studies, subjects are uninformed of the true task dimensionality and have to identify them through exploration. This design closely mimics the ambiguity in real-world tasks. Our results identified two stereotyped choice patterns that reveal “dimension-guided” strategies in exploration and exploitation. Cross-subject analyses suggest that dimension-guided exploration may promote the efficiency of reward-based learning. These findings indicate that humans leverage task dimensionality to guide exploration, and provide inspiration for improving exploration efficiency in AI agents.`,
       date: "2025, August",
-      link: "https://yilin-elaine-wu.github.io",
-      github: "",
-      download: "Yilin-Elaine-Wu/files/CCN2025_poster.pdf",
+      // download: "Yilin-Elaine-Wu/files/CCN2025_poster.pdf",
       writers: "An, J., Hu, J., <b>Wu, Y.E.</b>, Ning, S., Zhu, F., Pan, Y., & Ji, N*",
     }
   ],
