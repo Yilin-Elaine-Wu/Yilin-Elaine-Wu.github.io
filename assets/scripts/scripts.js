@@ -203,6 +203,11 @@ $(document).ready(function () {
         ? enPublicationsPageData.type_one_title
         : faPublicationsPageData.type_one_title;
 
+    document.getElementById("publications_type_one_subtitle").innerText =
+      lang === "en"
+        ? enPublicationsPageData.subtitle
+        : faPublicationsPageData.subtitle;
+    
     setPublicationData(
       "publications_type_one_data",
       lang === "en"
