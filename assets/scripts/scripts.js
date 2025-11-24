@@ -1,6 +1,6 @@
 var lang = localStorage.getItem("lang");
 var pathname = window.location.pathname.replace(".html", "");
-const lang = "en";
+// const lang = "en";
 
 $(document).ready(function () {
   // ---------- Language Handler
