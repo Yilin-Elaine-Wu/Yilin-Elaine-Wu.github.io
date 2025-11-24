@@ -28,7 +28,7 @@
 //       document.getElementById("languageText").innerText = "FA";
 //     }
 //   }
-<script>
+
   $(document).ready(function () {
     var wrapper = document.getElementById("content_wrapper");
     var languageIcon = document.getElementById("languageIcon");
@@ -46,7 +46,7 @@
       languageText.innerText = "EN";
     }
   });
-</script>
+
 
   // Home page data
   const home_data = {
