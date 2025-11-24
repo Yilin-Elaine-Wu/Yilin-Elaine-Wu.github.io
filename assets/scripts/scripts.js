@@ -28,24 +28,38 @@
 //       document.getElementById("languageText").innerText = "FA";
 //     }
 //   }
+ 
+    const lang = "en";
+    const pathname = window.location.pathname.replace(/\.html$/, "") || "/";
 
-    const lang = "en";  
-
-    $(document).ready(function () {
-      var wrapper = document.getElementById("content_wrapper");
-      var languageIcon = document.getElementById("languageIcon");
-      var languageText = document.getElementById("languageText");
-  
+    document.addEventListener("DOMContentLoaded", () => {
+      const wrapper = document.getElementById("content_wrapper");
+      const languageIcon = document.getElementById("languageIcon");
+      const languageText = document.getElementById("languageText");
+    
       if (wrapper) {
         wrapper.classList.add("ltr_wrapper");
         wrapper.classList.remove("rtl_wrapper");
       }
-  
+    
+      // 如果想完全隐藏语言切换按钮，直接移除元素或加样式
       if (languageIcon) {
         languageIcon.src = "../assets/images/icons/en.png";
       }
       if (languageText) {
         languageText.innerText = "EN";
+      }
+    
+      if (pathname === "/" || pathname === "/index") {
+        homeData();
+      } else if (pathname === "/publications") {
+        publicationsData();
+      } else if (pathname === "/research") {
+        researchData();
+      } else if (pathname === "/jobs") {
+        jobsData();
+      } else if (pathname === "/contact") {
+        contactData();
       }
     });
 
@@ -89,7 +103,7 @@
     ],
   };
 
-  document.addEventListener("DOMContentLoaded", homeData);
+  // document.addEventListener("DOMContentLoaded", homeData);
 
   function homeData() {
     const pageTitleEl = document.getElementById("page_title");
@@ -431,4 +445,3 @@
   if (pathname === "/contact") {
     contactData();
   }
-});
