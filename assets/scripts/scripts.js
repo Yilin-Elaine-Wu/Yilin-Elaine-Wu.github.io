@@ -1,67 +1,35 @@
-// var lang = localStorage.getItem("lang");
-// var pathname = window.location.pathname.replace(".html", "");
+var lang = localStorage.getItem("lang");
+var pathname = window.location.pathname.replace(".html", "");
+const lang = "en";
 
-// $(document).ready(function () {
-//   // ---------- Language Handler
-//   if (!lang) {
-//     localStorage.setItem("lang", "en");
-//   }
+$(document).ready(function () {
+  // ---------- Language Handler
+  if (!lang) {
+    localStorage.setItem("lang", "en");
+  }
 
-//   if (lang === "fa") {
-//     document.getElementById("content_wrapper").classList.add("rtl_wrapper");
-//     if (
-//       document.getElementById("languageIcon") &&
-//       document.getElementById("languageText")
-//     ) {
-//       document.getElementById("languageIcon").src =
-//         "../assets/images/icons/en.png";
-//       document.getElementById("languageText").innerText = "EN";
-//     }
-//   } else {
-//     document.getElementById("content_wrapper").classList.add("ltr_wrapper");
-//     if (
-//       document.getElementById("languageIcon") &&
-//       document.getElementById("languageText")
-//     ) {
-//       document.getElementById("languageIcon").src =
-//         "../assets/images/icons/ir.png";
-//       document.getElementById("languageText").innerText = "FA";
-//     }
-//   }
+  if (lang === "fa") {
+    document.getElementById("content_wrapper").classList.add("rtl_wrapper");
+    if (
+      document.getElementById("languageIcon") &&
+      document.getElementById("languageText")
+    ) {
+      document.getElementById("languageIcon").src =
+        "../assets/images/icons/en.png";
+      document.getElementById("languageText").innerText = "EN";
+    }
+  } else {
+    document.getElementById("content_wrapper").classList.add("ltr_wrapper");
+    if (
+      document.getElementById("languageIcon") &&
+      document.getElementById("languageText")
+    ) {
+      document.getElementById("languageIcon").src =
+        "../assets/images/icons/ir.png";
+      document.getElementById("languageText").innerText = "FA";
+    }
+  }
  
-    const lang = "en";
-    const pathname = window.location.pathname.replace(/\.html$/, "") || "/";
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const wrapper = document.getElementById("content_wrapper");
-      const languageIcon = document.getElementById("languageIcon");
-      const languageText = document.getElementById("languageText");
-    
-      if (wrapper) {
-        wrapper.classList.add("ltr_wrapper");
-        wrapper.classList.remove("rtl_wrapper");
-      }
-    
-      // 如果想完全隐藏语言切换按钮，直接移除元素或加样式
-      if (languageIcon) {
-        languageIcon.src = "../assets/images/icons/en.png";
-      }
-      if (languageText) {
-        languageText.innerText = "EN";
-      }
-    
-      if (pathname === "/" || pathname === "/index") {
-        homeData();
-      } else if (pathname === "/publications") {
-        publicationsData();
-      } else if (pathname === "/research") {
-        researchData();
-      } else if (pathname === "/jobs") {
-        jobsData();
-      } else if (pathname === "/contact") {
-        contactData();
-      }
-    });
 
 
   // Home page data
@@ -444,4 +412,4 @@
 
   if (pathname === "/contact") {
     contactData();
-  }
+  });
