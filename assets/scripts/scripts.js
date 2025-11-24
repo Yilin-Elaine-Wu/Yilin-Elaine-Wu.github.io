@@ -29,6 +29,8 @@
 //     }
 //   }
 
+    const lang = "en";  
+
     $(document).ready(function () {
       var wrapper = document.getElementById("content_wrapper");
       var languageIcon = document.getElementById("languageIcon");
@@ -45,7 +47,7 @@
       if (languageText) {
         languageText.innerText = "EN";
       }
-    }
+    });
 
 
   // Home page data
