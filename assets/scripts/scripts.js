@@ -63,7 +63,7 @@ $(document).ready(function () {
         name: globalData.resume,
         active: globalData.resume ? true : false,
         url: "/",
-        img: "../assets/images/icons/resume.png",
+        img: "../assets/images/icons/cv.png",
       },
     ],
   };
