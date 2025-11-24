@@ -29,7 +29,6 @@ $(document).ready(function () {
     }
   }
 
-
   // Home page data
   const home_data = {
     image: globalData.image,
@@ -69,7 +68,7 @@ $(document).ready(function () {
     ],
   };
 
-  // document.addEventListener("DOMContentLoaded", homeData);
+  document.addEventListener("DOMContentLoaded", homeData);
 
   function homeData() {
     const pageTitleEl = document.getElementById("page_title");
@@ -79,19 +78,19 @@ $(document).ready(function () {
     const homeLinksEl = document.getElementById("home_links");
     const homeTitleEl = document.getElementById("home_title");
     const homeContentEl = document.getElementById("home_content");
-  
+
     if (pageTitleEl)
       pageTitleEl.innerText = lang === "en" ? enHomePageData.name : faHomePageData.name;
-  
+
     if (homeImageEl)
       homeImageEl.src = home_data.image || "";
-  
+
     if (homeNameEl)
       homeNameEl.innerText = lang === "en" ? enHomePageData.name : faHomePageData.name;
-  
+
     if (homeJobTitleEl)
       homeJobTitleEl.innerText = lang === "en" ? enHomePageData.jobTitle : faHomePageData.jobTitle;
-  
+
     if (homeLinksEl)
       homeLinksEl.innerHTML = home_data.links
         .filter((item) => item.active)
@@ -104,16 +103,16 @@ $(document).ready(function () {
             </li>`
         )
         .join("");
-  
+
     if (homeTitleEl)
       homeTitleEl.innerText =
         lang === "en" ? enHomePageData.home_title : faHomePageData.home_title;
-  
+
     if (homeContentEl)
       homeContentEl.innerHTML =
         lang === "en" ? enHomePageData.home_content : faHomePageData.home_content;
   }
-  
+
   // function homeData() {
   //   document.getElementById("page_title").innerText =
   //     lang === "en" ? enHomePageData.name : faHomePageData.name;
@@ -208,7 +207,7 @@ $(document).ready(function () {
       lang === "en"
         ? enPublicationsPageData.subtitle
         : faPublicationsPageData.subtitle;
-    
+
     setPublicationData(
       "publications_type_one_data",
       lang === "en"
@@ -410,4 +409,5 @@ $(document).ready(function () {
 
   if (pathname === "/contact") {
     contactData();
-  };
+  }
+});
