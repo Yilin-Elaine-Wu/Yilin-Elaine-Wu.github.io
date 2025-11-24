@@ -410,4 +410,4 @@ $(document).ready(function () {
 
   if (pathname === "/contact") {
     contactData();
-  });
+  };
