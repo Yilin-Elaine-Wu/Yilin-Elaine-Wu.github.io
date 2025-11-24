@@ -29,23 +29,23 @@
 //     }
 //   }
 
-  $(document).ready(function () {
-    var wrapper = document.getElementById("content_wrapper");
-    var languageIcon = document.getElementById("languageIcon");
-    var languageText = document.getElementById("languageText");
-
-    if (wrapper) {
-      wrapper.classList.add("ltr_wrapper");
-      wrapper.classList.remove("rtl_wrapper");
+    $(document).ready(function () {
+      var wrapper = document.getElementById("content_wrapper");
+      var languageIcon = document.getElementById("languageIcon");
+      var languageText = document.getElementById("languageText");
+  
+      if (wrapper) {
+        wrapper.classList.add("ltr_wrapper");
+        wrapper.classList.remove("rtl_wrapper");
+      }
+  
+      if (languageIcon) {
+        languageIcon.src = "../assets/images/icons/en.png";
+      }
+      if (languageText) {
+        languageText.innerText = "EN";
+      }
     }
-
-    if (languageIcon) {
-      languageIcon.src = "../assets/images/icons/en.png";
-    }
-    if (languageText) {
-      languageText.innerText = "EN";
-    }
-  });
 
 
   // Home page data
