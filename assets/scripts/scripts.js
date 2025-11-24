@@ -1,6 +1,5 @@
 var lang = localStorage.getItem("lang");
 var pathname = window.location.pathname.replace(".html", "");
-// const lang = "en";
 
 $(document).ready(function () {
   // ---------- Language Handler
@@ -29,7 +28,6 @@ $(document).ready(function () {
       document.getElementById("languageText").innerText = "FA";
     }
   }
- 
 
 
   // Home page data
