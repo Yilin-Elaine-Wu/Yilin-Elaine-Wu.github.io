@@ -1,33 +1,52 @@
-var lang = localStorage.getItem("lang");
-var pathname = window.location.pathname.replace(".html", "");
+// var lang = localStorage.getItem("lang");
+// var pathname = window.location.pathname.replace(".html", "");
 
-$(document).ready(function () {
-  // ---------- Language Handler
-  if (!lang) {
-    localStorage.setItem("lang", "en");
-  }
+// $(document).ready(function () {
+//   // ---------- Language Handler
+//   if (!lang) {
+//     localStorage.setItem("lang", "en");
+//   }
 
-  if (lang === "fa") {
-    document.getElementById("content_wrapper").classList.add("rtl_wrapper");
-    if (
-      document.getElementById("languageIcon") &&
-      document.getElementById("languageText")
-    ) {
-      document.getElementById("languageIcon").src =
-        "../assets/images/icons/en.png";
-      document.getElementById("languageText").innerText = "EN";
+//   if (lang === "fa") {
+//     document.getElementById("content_wrapper").classList.add("rtl_wrapper");
+//     if (
+//       document.getElementById("languageIcon") &&
+//       document.getElementById("languageText")
+//     ) {
+//       document.getElementById("languageIcon").src =
+//         "../assets/images/icons/en.png";
+//       document.getElementById("languageText").innerText = "EN";
+//     }
+//   } else {
+//     document.getElementById("content_wrapper").classList.add("ltr_wrapper");
+//     if (
+//       document.getElementById("languageIcon") &&
+//       document.getElementById("languageText")
+//     ) {
+//       document.getElementById("languageIcon").src =
+//         "../assets/images/icons/ir.png";
+//       document.getElementById("languageText").innerText = "FA";
+//     }
+//   }
+<script>
+  $(document).ready(function () {
+    var wrapper = document.getElementById("content_wrapper");
+    var languageIcon = document.getElementById("languageIcon");
+    var languageText = document.getElementById("languageText");
+
+    if (wrapper) {
+      wrapper.classList.add("ltr_wrapper");
+      wrapper.classList.remove("rtl_wrapper");
     }
-  } else {
-    document.getElementById("content_wrapper").classList.add("ltr_wrapper");
-    if (
-      document.getElementById("languageIcon") &&
-      document.getElementById("languageText")
-    ) {
-      document.getElementById("languageIcon").src =
-        "../assets/images/icons/ir.png";
-      document.getElementById("languageText").innerText = "FA";
+
+    if (languageIcon) {
+      languageIcon.src = "../assets/images/icons/en.png";
     }
-  }
+    if (languageText) {
+      languageText.innerText = "EN";
+    }
+  });
+</script>
 
   // Home page data
   const home_data = {
