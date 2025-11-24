@@ -327,7 +327,7 @@ $(document).ready(function () {
 
   // Contact page data
   const contact_data = {
-    contact_title: lang === "en" ? "Contact" : "ارتباط با من",
+    contact_title: lang === "en" ? "Let's connect:" : "ارتباط با من",
     contact_items: [
       {
         img: "../assets/images/icons/location.png",
