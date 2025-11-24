@@ -64,7 +64,7 @@ const enPublicationsPageData = {
     }
   ],
 
-  // type_two_title: "",
+  type_two_title: "",
   // type_two_items: [
   //   {
   //     title: ``,
@@ -84,7 +84,7 @@ const enPublicationsPageData = {
   //   },
   // ],
 
-  // type_three_title: "",
+  type_three_title: "",
   // type_three_items: [
   //   {
   //     title: ``,
@@ -104,7 +104,7 @@ const enPublicationsPageData = {
   //   },
   // ],
 
-  // type_four_title: "",
+  type_four_title: "",
   // type_four_items: [
   //   {
   //     title: ``,
