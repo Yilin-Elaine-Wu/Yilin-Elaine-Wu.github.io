@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yilin Wu's Homepage</title>
+  <meta
+    name="description"
+    content="Personal homepage"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #171717;
+      --muted: #5f5f5f;
+      --line: #ece7df;
+      --line-strong: #ded3c6;
+      --accent: #2b7ec7;
+      --accent-soft: #fbf3ec;
+      --chip-bg: #ffffff;
+      --chip-border: #e7ded4;
+      --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.05);
+      --max-width: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.18s ease, opacity 0.18s ease, transform 0.18s ease;
+    }
+
+    a:hover {
+      opacity: 0.82;
+    }
+
+    .page {
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    .wrap {
+      width: min(50vw, var(--max-width)); /* narrower on laptop screens */
+      margin: 0 auto;
+      padding: 40px 0 64px;
+    }
+
+    .top-divider-wrap {
+      margin: 0 0 34px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .top-divider-accent {
+      width: 34px;
+      height: 3px;
+      border-radius: 999px;
+      background: var(--accent);
+      flex: 0 0 auto;
+    }
+
+    .top-divider-line {
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        var(--line-strong) 0%,
+        var(--line) 45%,
+        rgba(236, 231, 223, 0) 100%
+      );
+      flex: 1 1 auto;
+    }
+
+    .footer-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--line);
+      margin: 56px 0 18px;
+    }
+
+    .hero {
+      position: relative;
+    }
+
+    .name {
+      margin: 0 0 10px;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      font-weight: 800;
+    }
+
+    .subtitle {
+      margin: 0;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    .intro {
+      margin-top: 24px;
+    }
+
+    .avatar-float {
+      float: right;
+      width:240px; /* larger width for a rectangle */
+      height: 240px; /* thinner height */
+      margin: 6px 0 18px 30px;
+      border-radius: 10px; /* gentle rounded rectangle */
+      overflow: hidden;
+      background: #f1f1f1;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .avatar-float img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .intro p {
+      margin: 0 0 18px;
+      font-size: 1.02rem;
+    }
+
+    .intro::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 12px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .links::-webkit-scrollbar {
+      display: none;
+    }
+
+    .icon-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: var(--chip-bg);
+      border: 1px solid var(--accent); /* blue border for contact buttons */
+      color: var(--text);
+      font-size: 0.94rem;
+      font-weight: 500;
+      box-shadow: var(--shadow-soft);
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+
+    .icon-link:hover {
+      transform: translateY(-1px);
+      color: var(--accent);
+      border-color: #dcc7b7;
+      opacity: 1;
+    }
+
+    .icon-link svg {
+      width: 17px;
+      height: 17px;
+      stroke: currentColor;
+      flex-shrink: 0;
+    }
+
+    .section {
+      margin-top: 56px;
+    }
+
+    .section h2 {
+      margin: 0 0 18px;
+      font-size: 1.85rem;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      font-weight: 500;
+    }
+
+    .bullets {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .bullets li {
+      margin: 0 0 10px;
+      font-size: 1rem;
+    }
+
+    .bullets li::marker {
+      color: var(--accent);
+    }
+
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .pub-item {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .pub-tag {
+      display: inline-block;
+      width: fit-content;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .pub-title {
+      margin: 0 0 4px;
+      font-size: 1.02rem;
+      line-height: 1.45;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .pub-authors,
+    .pub-venue {
+      margin: 0;
+      font-size: 0.96rem;
+      color: var(--muted);
+    }
+
+    .pub-links {
+      margin-top: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .pub-links a {
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .footer {
+      color: var(--muted);
+      font-size: 0.92rem;
+      padding-bottom: 6px;
+    }
+
+    @media (max-width: 1100px) {
+      .wrap {
+        width: min(78vw, 920px);
+      }
+    }
+
+    @media (max-width: 820px) {
+      .wrap {
+        width: calc(100% - 36px);
+        padding: 28px 0 48px;
+      }
+
+      .top-divider-wrap {
+        margin-bottom: 28px;
+      }
+
+      .avatar-float {
+        width: 138px;
+        height: 138px;
+        margin: 6px 0 16px 20px;
+      }
+
+      .section {
+        margin-top: 42px;
+      }
+
+      .section h2 {
+        font-size: 1.55rem;
+      }
+
+      .pub-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .links {
+        flex-wrap: wrap;
+        overflow-x: visible;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .name {
+        font-size: 2.15rem;
+      }
+
+      .subtitle,
+      .intro p,
+      .bullets li,
+      .pub-authors,
+      .pub-venue {
+        font-size: 0.98rem;
+      }
+
+      .avatar-float {
+        float: none;
+        width: 122px;
+        height: 122px;
+        margin: 0 0 18px 0;
+      }
+
+      .top-divider-wrap {
+        gap: 10px;
+        margin-bottom: 22px;
+      }
+
+      .top-divider-accent {
+        width: 26px;
+      }
+
+      .footer-divider {
+        margin: 44px 0 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .wrap {
+        width: calc(100% - 28px);
+      }
+
+      .icon-link {
+        font-size: 0.92rem;
+        padding: 8px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <main class="wrap">
+      <div class="top-divider-wrap" aria-hidden="true">
+        <span class="top-divider-accent"></span>
+        <span class="top-divider-line"></span>
+      </div>
+
+      <section class="hero">
+        <h1 class="name">Yilin Wu</h1>
+        <p class="subtitle">Undergraduate in Psychology · PhD Applicant</p>
+
+        <div class="intro">
+          <div class="avatar-float">
+            <img src="profile_figure.jpg" alt="Portrait" />
+          </div>
+
+          <p>
+            I'm Yilin Wu (吴依霖). I'm an undergraduate majoring in psychology in School of Social Behavioral Sciences in Nanjing University. 
+          </p>
+          <p>
+            I'm interested in human cognition and computational modeling of human minds. I am currently a research intern working in
+            <a href="https://aemc2.github.io/JiLab.github.io/">Ji Lab</a> under the supervision of
+            <a href="https://www.cibr.ac.cn/#/teamDetail/cibrTeamteam/7eaf96c5b298444b84328680fb1b7a15/Ni%20Ji?lang=en">Prof. Ni Ji</a> in
+            <a href="https://www.cibr.ac.cn/#/home?lang=en">China Institute of Brain Research</a>
+            .
+          </p>
+          <!-- <p>
+              In my free time, I enjoy singing, cooking and ASMR videos.
+          </p> -->
+        </div>
+
+        <ul class="links">
+          <li>
+            <a class="icon-link" href="mailto:yilinelainewu@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16v12H4z"></path>
+                <path d="M22 7l-10 7L2 7"></path>
+              </svg>
+              Email
+            </a>
+          </li>
+          <!-- <li>
+            <a class="icon-link" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-4 1.5-4-2.5-6-3"></path>
+                <path d="M15 22v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-6 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77 5.44 5.44 0 0 0 3.5 8.52c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              GitHub
+            </a>
+          </li> -->
+          <li>
+            <a class="icon-link" href="https://orcid.org/my-orcid?orcid=0009-0004-0686-398X" target="_blank" rel="noopener noreferrer" aria-label="OpenReview">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 5h16v14H4z"></path>
+                <path d="M8 9h8"></path>
+                <path d="M8 13h8"></path>
+                <path d="M8 17h5"></path>
+              </svg>
+              OpenReview
+            </a>
+          </li>
+          <li>
+            <a class="icon-link" href="CV_Yilin_Wu_26spring copy.pdf" target="_blank" rel="noopener noreferrer" aria-label="CV">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <path d="M14 2v6h6"></path>
+                <path d="M8 13h8"></path>
+                <path d="M8 17h5"></path>
+              </svg>
+              CV
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Research Interests</h2>
+        <p>
+            I work to understand how human 
+            <a href="#">learn</a> and <a href="#">reason</a>. I'm currently investigating how humans extract useful information from a complex environment, and how they form abstract mental representations in an effective way.
+        </p>
+        <p>
+            I try to answer these questions through studying the human innate cognitive toolkits, including game-playing, eye-moving and use of language, primarily by conducting <a href="#">behavioral experiments</a> and building <a href="#">computational models</a> including normative models like RL and Bayesian models and expectedly also neural networks. 
+          </p>
+          <p>
+            I'm also interested in research in <a href="#">developmental cognition</a>, I hope to investigate how the intricate human minds are built up, by interacting with children in their early stage of development. I'm looking forward to collaborate with researchers experienced in techniques like real-life video analysis, artificial neural networks  and neuroimaging as well.
+          </p>
+        <ul class="bullets">
+          <li>Human learning, memory, attention, and reasoning.</li>
+          <li>Computational cognitive modeling and theory-driven approaches to cognition.</li>
+          <li>Human-AI interaction, especially interpretability, trust, and collaborative intelligence.</li>
+          <li>Interdisciplinary questions connecting cognitive science, psychology, neuroscience, and AI.</li>
+        </ul>
+        
+      </section>
+
+      <section class="section">
+        <h2>Publications</h2>
+
+        <div class="pub-list">
+          <article class="pub-item">
+            <div>
+              <span class="pub-tag">2025</span>
+            </div>
+            <div>
+              <p class="pub-title">Task-space dimensions guide human exploration in complex environments (Poster Presentation)</p>
+              <p class="pub-authors">An, J.; Hu, J.; <b>Wu, Y.E.</b>; Ning, S.; Zhu, F.; Pan, Y.; Wang, R.; Ji, N*</p>
+              <p class="pub-venue">Cognitive Computational Neuroscience (CCN), 2025, Amsterdam</p>
+              <ul>
+                <li>Designed a novel task to study how humans extract useful information in complex, high-dimensional environments.</li>
+                <li>Identified choice patterns suggesting dimension-based compositional organization of information.</li>
+                <li>Found that existing models fail to capture these behaviors, motivating new human-like models.</li>
+              </ul>
+              <div class="pub-links">
+                <a class="icon-link" href="CCN2025_poster.pdf" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <path d="M14 2v6h6"></path>
+                    <path d="M8 13h8"></path>
+                    <path d="M8 17h5"></path>
+                  </svg>
+                  PDF
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- <article class="pub-item">
+            <div>
+              <span class="pub-tag">2026</span>
+            </div>
+            <div>
+              <p class="pub-title">Your Paper Title Goes Here</p>
+              <p class="pub-authors">Your Name, Coauthor A, Coauthor B</p>
+              <p class="pub-venue">Under review / Manuscript in preparation</p>
+              <div class="pub-links">
+                <a href="paper.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+              </div>
+            </div>
+          </article> -->
+        </div>
+      </section>
+
+      <div class="footer-divider"></div>
+
+      <footer class="footer">
+        © <span id="year"></span> Yilin Wu
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
