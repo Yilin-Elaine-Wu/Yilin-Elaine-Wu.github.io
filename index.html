@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yilin Wu's Homepage</title>
+  <title>Yilin Wu</title>
   <meta
     name="description"
-    content="Personal homepage"
+    content="Yilin Wu is a Research Assistant at Ji Lab studying structured exploration, learning, and computational cognitive modeling."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -278,20 +278,83 @@
       font-weight: 500;
     }
 
-    .pub-media {
-      margin-top: 14px;
-      max-width: 560px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
+    .section-intro {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr) 108px;
+      gap: 18px;
+      align-items: start;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .news-item:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .news-date {
+      display: inline-block;
+      width: fit-content;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .news-title {
+      margin: 0 0 4px;
+      font-size: 1rem;
+      line-height: 1.45;
+      font-weight: 600;
+    }
+
+    .news-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .news-thumb {
+      width: 108px;
+      aspect-ratio: 1 / 1;
+      justify-self: end;
+      border-radius: 14px;
       overflow: hidden;
+      border: 1px solid var(--line);
       background: #faf8f4;
       box-shadow: var(--shadow-soft);
     }
 
-    .pub-media img {
+    .news-thumb img {
       width: 100%;
+      height: 100%;
       display: block;
       object-fit: cover;
+    }
+
+    .news-thumb--talk img {
+      object-position: center 18%;
+    }
+
+    .news-thumb--ccn img {
+      object-position: center 28%;
     }
 
     .footer {
@@ -335,6 +398,16 @@
         gap: 8px;
       }
 
+      .news-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .news-thumb {
+        width: 126px;
+        justify-self: start;
+      }
+
       .links {
         flex-wrap: wrap;
         overflow-x: visible;
@@ -349,6 +422,7 @@
       .subtitle,
       .intro p,
       .bullets li,
+      .news-copy p,
       .pub-authors,
       .pub-venue {
         font-size: 0.98rem;
@@ -397,7 +471,7 @@
 
       <section class="hero">
         <h1 class="name">Yilin Wu</h1>
-        <p class="subtitle">Undergraduate in Psychology · PhD Applicant</p>
+        <p class="subtitle">Research Assistant at Ji Lab · Cognitive Science</p>
 
         <div class="intro">
           <div class="avatar-float">
@@ -405,18 +479,19 @@
           </div>
 
           <p>
-            I'm Yilin Wu (吴依霖). I'm an undergraduate majoring in psychology in School of Social Behavioral Sciences in Nanjing University. 
+            I'm Yilin Wu (吴依霖), a Research Assistant in
+            <a href="https://aemc2.github.io/JiLab.github.io/">Ji Lab</a> at
+            <a href="https://www.cibr.ac.cn/#/home?lang=en">China Institute of Brain Research</a>.
+            I recently graduated with a degree in psychology from Nanjing University.
           </p>
           <p>
-            I'm interested in human cognition and computational modeling of human minds. I am currently a research intern working in
-            <a href="https://aemc2.github.io/JiLab.github.io/">Ji Lab</a> under the supervision of
-            <a href="https://www.cibr.ac.cn/#/teamDetail/cibrTeamteam/7eaf96c5b298444b84328680fb1b7a15/Ni%20Ji?lang=en">Prof. Ni Ji</a> in
-            <a href="https://www.cibr.ac.cn/#/home?lang=en">China Institute of Brain Research</a>
-            .
+            My research focuses on how people search for structure in complex environments, how that structure supports efficient learning,
+            and how these strategies vary across individuals. I combine behavioral experiments with computational modeling under the supervision of
+            <a href="https://www.cibr.ac.cn/#/teamDetail/cibrTeamteam/7eaf96c5b298444b84328680fb1b7a15/Ni%20Ji?lang=en">Prof. Ni Ji</a>.
           </p>
-          <!-- <p>
-              In my free time, I enjoy singing, cooking and ASMR videos.
-          </p> -->
+          <p>
+            More broadly, I am interested in theory-driven work at the intersection of cognitive science, affective traits, and adaptive behavior.
+          </p>
         </div>
 
         <ul class="links">
@@ -439,14 +514,14 @@
             </a>
           </li> -->
           <li>
-            <a class="icon-link" href="https://orcid.org/my-orcid?orcid=0009-0004-0686-398X" target="_blank" rel="noopener noreferrer" aria-label="OpenReview">
+            <a class="icon-link" href="https://orcid.org/my-orcid?orcid=0009-0004-0686-398X" target="_blank" rel="noopener noreferrer" aria-label="ORCID">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 5h16v14H4z"></path>
                 <path d="M8 9h8"></path>
                 <path d="M8 13h8"></path>
                 <path d="M8 17h5"></path>
               </svg>
-              OpenReview
+              ORCID
             </a>
           </li>
           <li>
@@ -464,28 +539,59 @@
       </section>
 
       <section class="section">
+        <h2>Recent News</h2>
+        <div class="news-list">
+          <article class="news-item">
+            <div>
+              <span class="news-date">Aug 2026</span>
+            </div>
+            <div class="news-copy">
+              <p class="news-title">Presented a short talk and a poster at Beijing Brain Conference 2026.</p>
+              <p>
+                I gave a short talk in the thematic forum “Neural Mechanisms of Psychiatric Disorders” and presented a poster on structured exploration and efficient learning in humans.
+              </p>
+            </div>
+            <a class="news-thumb news-thumb--talk" href="images/bbc2026_short_talk.jpg" target="_blank" rel="noopener noreferrer" aria-label="Beijing Brain Conference 2026 talk photo">
+              <img src="images/bbc2026_short_talk.jpg" alt="Yilin Wu giving a short talk at Beijing Brain Conference 2026" />
+            </a>
+          </article>
+
+          <article class="news-item">
+            <div>
+              <span class="news-date">Aug 2025</span>
+            </div>
+            <div class="news-copy">
+              <p class="news-title">Presented a poster at Cognitive Computational Neuroscience (CCN) 2025 in Amsterdam.</p>
+              <p>
+                This work introduced a task for studying how humans organize high-dimensional environments through task-space dimensions during exploration.
+              </p>
+            </div>
+            <a class="news-thumb news-thumb--ccn" href="images/ccn2025_poster_group.jpg" target="_blank" rel="noopener noreferrer" aria-label="CCN 2025 poster photo">
+              <img src="images/ccn2025_poster_group.jpg" alt="Yilin Wu and collaborators standing beside the CCN 2025 poster" />
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
         <h2>Research Interests</h2>
         <p>
-            I work to understand how human 
-            <a href="#">learn</a> and <a href="#">reason</a>. I'm currently investigating how humans extract useful information from a complex environment, and how they form abstract mental representations in an effective way.
+          I study how humans discover structure in rich environments and how those internal representations guide exploration, learning, and generalization.
         </p>
         <p>
-            I try to answer these questions through studying the human innate cognitive toolkits, including game-playing, eye-moving and use of language, primarily by conducting <a href="#">behavioral experiments</a> and building <a href="#">computational models</a> including normative models like RL and Bayesian models and expectedly also neural networks. 
-          </p>
-          <p>
-            I'm also interested in research in <a href="#">developmental cognition</a>, I hope to investigate how the intricate human minds are built up, by interacting with children in their early stage of development. I'm looking forward to collaborate with researchers experienced in techniques like real-life video analysis, artificial neural networks  and neuroimaging as well.
-          </p>
+          Methodologically, I combine behavioral experiments with computational modeling, especially reinforcement-learning and Bayesian approaches, to connect observable behavior with latent cognitive processes.
+        </p>
         <ul class="bullets">
-          <li>Human learning, memory, attention, and reasoning.</li>
-          <li>Computational cognitive modeling and theory-driven approaches to cognition.</li>
-          <li>Human-AI interaction, especially interpretability, trust, and collaborative intelligence.</li>
-          <li>Interdisciplinary questions connecting cognitive science, psychology, neuroscience, and AI.</li>
+          <li>Structured exploration and representation learning in complex environments.</li>
+          <li>Computational models of learning, attention, and decision-making.</li>
+          <li>Individual differences in anxiety and adaptive behavior.</li>
         </ul>
         
       </section>
 
       <section class="section">
-        <h2>Publications</h2>
+        <h2>Selected Presentations</h2>
+        <p class="section-intro">Recent talks and posters related to structured exploration, learning, and computational cognitive modeling.</p>
 
         <div class="pub-list">
           <article class="pub-item">
@@ -493,25 +599,22 @@
               <span class="pub-tag">2026</span>
             </div>
             <div>
-              <p class="pub-title">Structured Exploration from Latent Task Dimensions Supports Efficient Human Learning (Short Talk)</p>
+              <p class="pub-title">Structured Exploration from Latent Task Dimensions Supports Efficient Human Learning.</p>
               <p class="pub-authors"><b>Wu, Y.E.</b></p>
-              <p class="pub-venue">Young Scientists Forum, Beijing Brain Conference, August 14, 2026, Beijing</p>
+              <p class="pub-venue">Short talk at the thematic forum “Neural Mechanisms of Psychiatric Disorders,” Beijing Brain Conference, August 14, 2026, Beijing.</p>
               <ul>
-                <li>Presented ongoing work on how latent task dimensions shape structured exploration and efficient human learning.</li>
-                <li>Shared animated slides for the talk, so the original PPTX is linked instead of a flattened PDF.</li>
+                <li>Discussed how people use latent task dimensions to organize exploration in complex environments, supporting more efficient learning.</li>
+                <li>Highlighted emerging evidence that structured exploration differs across levels of trait anxiety, suggesting a link between exploratory strategies and affective vulnerability.</li>
               </ul>
-              <div class="pub-media">
-                <img src="images/bbc2026_short_talk.jpg" alt="Yilin Wu giving a short talk at Beijing Brain Conference 2026" />
-              </div>
               <div class="pub-links">
-                <a class="icon-link" href="https://en.cibr.ac.cn/cibrMeeting/meeting2026/overview" target="_blank" rel="noopener noreferrer">
+                <a class="icon-link" href="BBC2026_short-talk_slides_Yilin-Wu.pptx" target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                     <path d="M14 2v6h6"></path>
                     <path d="M8 13h8"></path>
                     <path d="M8 17h5"></path>
                   </svg>
-                  Conference
+                  Slides (PPTX)
                 </a>
                 <a class="icon-link" href="https://en.cibr.ac.cn/cibrMeeting/meeting2026/schedule" target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -520,16 +623,7 @@
                     <path d="M8 2v4"></path>
                     <path d="M3 10h18"></path>
                   </svg>
-                  Schedule
-                </a>
-                <a class="icon-link" href="BBC2026_short-talk_slides_Yilin-Wu.pptx" target="_blank" rel="noopener noreferrer">
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <path d="M14 2v6h6"></path>
-                    <path d="M8 13h8"></path>
-                    <path d="M8 17h5"></path>
-                  </svg>
-                  Slides
+                  Program
                 </a>
               </div>
             </div>
@@ -540,26 +634,13 @@
               <span class="pub-tag">2026</span>
             </div>
             <div>
-              <p class="pub-title">Task-Space Dimensions Guide Structured Exploration and Efficient Learning in Humans (Poster Presentation)</p>
-              <p class="pub-authors">An, J.; Hu, J.; <b>Wu, Y.E.</b>; Ning, S.; Zhu, F.; Pan, Y.; Ji, N*</p>
-              <p class="pub-venue">Beijing Brain Conference, August 2026, Beijing</p>
+              <p class="pub-title">Task-Space Dimensions Guide Structured Exploration and Efficient Learning in Humans.</p>
+              <p class="pub-authors">An, J.; Hu, J.; <b>Wu, Y.E.</b>; Liu, C.; Ning, S.; Shi, T.; Shen, S.; Zhu, F.; Pan, Y.; Wang, R.; Ji, N.*</p>
+              <p class="pub-venue">Poster presented at Beijing Brain Conference, August 2026, Beijing.</p>
               <ul>
-                <li>Presented a poster on how task-space dimensions guide structured exploration and support efficient human learning.</li>
-                <li>Discussed behavioral evidence and modeling results from a novel learning task during the conference poster session.</li>
+                <li>Presented behavioral and modeling results showing how task-space dimensions guide exploration and support efficient human learning.</li>
               </ul>
-              <div class="pub-media">
-                <img src="images/bbc2026_poster_session.jpg" alt="Yilin Wu presenting a poster at Beijing Brain Conference 2026" />
-              </div>
               <div class="pub-links">
-                <a class="icon-link" href="https://en.cibr.ac.cn/cibrMeeting/meeting2026/overview" target="_blank" rel="noopener noreferrer">
-                  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <path d="M14 2v6h6"></path>
-                    <path d="M8 13h8"></path>
-                    <path d="M8 17h5"></path>
-                  </svg>
-                  Conference
-                </a>
                 <a class="icon-link" href="BBC2026_poster_Task-Space-Dimensions.pdf" target="_blank" rel="noopener noreferrer">
                   <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -578,9 +659,9 @@
               <span class="pub-tag">2025</span>
             </div>
             <div>
-              <p class="pub-title">Task-space dimensions guide human exploration in complex environments (Poster Presentation)</p>
+              <p class="pub-title">Task-space dimensions guide human exploration in complex environments.</p>
               <p class="pub-authors">An, J.; Hu, J.; <b>Wu, Y.E.</b>; Ning, S.; Zhu, F.; Pan, Y.; Wang, R.; Ji, N*</p>
-              <p class="pub-venue">Cognitive Computational Neuroscience (CCN), 2025, Amsterdam</p>
+              <p class="pub-venue">Poster presented at Cognitive Computational Neuroscience (CCN), 2025, Amsterdam.</p>
               <ul>
                 <li>Designed a novel task to study how humans extract useful information in complex, high-dimensional environments.</li>
                 <li>Identified choice patterns suggesting dimension-based compositional organization of information.</li>
